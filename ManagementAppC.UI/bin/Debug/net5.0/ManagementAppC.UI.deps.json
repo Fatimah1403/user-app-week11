@@ -1,0 +1,69 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "ManagementAppC.UI/1.0.0": {
+        "dependencies": {
+          "ManagementApp.BL": "1.0.0",
+          "ManagementApp.Commons": "1.0.0",
+          "ManagementApp.DataStorage": "1.0.0",
+          "ManagementApp.Models": "1.0.0"
+        },
+        "runtime": {
+          "ManagementAppC.UI.dll": {}
+        }
+      },
+      "ManagementApp.BL/1.0.0": {
+        "runtime": {
+          "ManagementApp.BL.dll": {}
+        }
+      },
+      "ManagementApp.Commons/1.0.0": {
+        "runtime": {
+          "ManagementApp.Commons.dll": {}
+        }
+      },
+      "ManagementApp.DataStorage/1.0.0": {
+        "runtime": {
+          "ManagementApp.DataStorage.dll": {}
+        }
+      },
+      "ManagementApp.Models/1.0.0": {
+        "runtime": {
+          "ManagementApp.Models.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ManagementAppC.UI/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ManagementApp.BL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ManagementApp.Commons/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ManagementApp.DataStorage/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ManagementApp.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

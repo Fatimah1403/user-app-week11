@@ -1,0 +1,12 @@
+C:\Women techsters\fattyass tasks\myweek11task\ManagementApp.DataStorage\bin\Debug\net5.0\ManagementApp.DataStorage.deps.json
+C:\Women techsters\fattyass tasks\myweek11task\ManagementApp.DataStorage\bin\Debug\net5.0\ManagementApp.DataStorage.dll
+C:\Women techsters\fattyass tasks\myweek11task\ManagementApp.DataStorage\bin\Debug\net5.0\ref\ManagementApp.DataStorage.dll
+C:\Women techsters\fattyass tasks\myweek11task\ManagementApp.DataStorage\bin\Debug\net5.0\ManagementApp.DataStorage.pdb
+C:\Women techsters\fattyass tasks\myweek11task\ManagementApp.DataStorage\obj\Debug\net5.0\ManagementApp.DataStorage.csproj.AssemblyReference.cache
+C:\Women techsters\fattyass tasks\myweek11task\ManagementApp.DataStorage\obj\Debug\net5.0\ManagementApp.DataStorage.GeneratedMSBuildEditorConfig.editorconfig
+C:\Women techsters\fattyass tasks\myweek11task\ManagementApp.DataStorage\obj\Debug\net5.0\ManagementApp.DataStorage.AssemblyInfoInputs.cache
+C:\Women techsters\fattyass tasks\myweek11task\ManagementApp.DataStorage\obj\Debug\net5.0\ManagementApp.DataStorage.AssemblyInfo.cs
+C:\Women techsters\fattyass tasks\myweek11task\ManagementApp.DataStorage\obj\Debug\net5.0\ManagementApp.DataStorage.csproj.CoreCompileInputs.cache
+C:\Women techsters\fattyass tasks\myweek11task\ManagementApp.DataStorage\obj\Debug\net5.0\ManagementApp.DataStorage.dll
+C:\Women techsters\fattyass tasks\myweek11task\ManagementApp.DataStorage\obj\Debug\net5.0\ref\ManagementApp.DataStorage.dll
+C:\Women techsters\fattyass tasks\myweek11task\ManagementApp.DataStorage\obj\Debug\net5.0\ManagementApp.DataStorage.pdb

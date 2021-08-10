@@ -1,0 +1,130 @@
+{
+  "version": 3,
+  "targets": {
+    "net5.0": {
+      "ManagementApp.Commons/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/ManagementApp.Commons.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ManagementApp.Commons.dll": {}
+        }
+      },
+      "ManagementApp.DataStorage/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/ManagementApp.DataStorage.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ManagementApp.DataStorage.dll": {}
+        }
+      },
+      "ManagementApp.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "ManagementApp.Commons": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ManagementApp.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ManagementApp.Models.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ManagementApp.Commons/1.0.0": {
+      "type": "project",
+      "path": "../ManagementApp.Commons/ManagementApp.Commons.csproj",
+      "msbuildProject": "../ManagementApp.Commons/ManagementApp.Commons.csproj"
+    },
+    "ManagementApp.DataStorage/1.0.0": {
+      "type": "project",
+      "path": "../ManagementApp.DataStorage/ManagementApp.DataStorage.csproj",
+      "msbuildProject": "../ManagementApp.DataStorage/ManagementApp.DataStorage.csproj"
+    },
+    "ManagementApp.Models/1.0.0": {
+      "type": "project",
+      "path": "../ManagementApp.Models/ManagementApp.Models.csproj",
+      "msbuildProject": "../ManagementApp.Models/ManagementApp.Models.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net5.0": [
+      "ManagementApp.Commons >= 1.0.0",
+      "ManagementApp.DataStorage >= 1.0.0",
+      "ManagementApp.Models >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\kydba\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Women techsters\\fattyass tasks\\myweek11task\\ManagementApp.BL\\ManagementApp.BL.csproj",
+      "projectName": "ManagementApp.BL",
+      "projectPath": "C:\\Women techsters\\fattyass tasks\\myweek11task\\ManagementApp.BL\\ManagementApp.BL.csproj",
+      "packagesPath": "C:\\Users\\kydba\\.nuget\\packages\\",
+      "outputPath": "C:\\Women techsters\\fattyass tasks\\myweek11task\\ManagementApp.BL\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\kydba\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net5.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {}
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "projectReferences": {
+            "C:\\Women techsters\\fattyass tasks\\myweek11task\\ManagementApp.Commons\\ManagementApp.Commons.csproj": {
+              "projectPath": "C:\\Women techsters\\fattyass tasks\\myweek11task\\ManagementApp.Commons\\ManagementApp.Commons.csproj"
+            },
+            "C:\\Women techsters\\fattyass tasks\\myweek11task\\ManagementApp.DataStorage\\ManagementApp.DataStorage.csproj": {
+              "projectPath": "C:\\Women techsters\\fattyass tasks\\myweek11task\\ManagementApp.DataStorage\\ManagementApp.DataStorage.csproj"
+            },
+            "C:\\Women techsters\\fattyass tasks\\myweek11task\\ManagementApp.Models\\ManagementApp.Models.csproj": {
+              "projectPath": "C:\\Women techsters\\fattyass tasks\\myweek11task\\ManagementApp.Models\\ManagementApp.Models.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net5.0": {
+        "targetAlias": "net5.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

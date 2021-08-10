@@ -1,0 +1,12 @@
+C:\Women techsters\fattyass tasks\myweek11task\ManagementApp.BL\bin\Debug\net5.0\ManagementApp.BL.deps.json
+C:\Women techsters\fattyass tasks\myweek11task\ManagementApp.BL\bin\Debug\net5.0\ManagementApp.BL.dll
+C:\Women techsters\fattyass tasks\myweek11task\ManagementApp.BL\bin\Debug\net5.0\ref\ManagementApp.BL.dll
+C:\Women techsters\fattyass tasks\myweek11task\ManagementApp.BL\bin\Debug\net5.0\ManagementApp.BL.pdb
+C:\Women techsters\fattyass tasks\myweek11task\ManagementApp.BL\obj\Debug\net5.0\ManagementApp.BL.csproj.AssemblyReference.cache
+C:\Women techsters\fattyass tasks\myweek11task\ManagementApp.BL\obj\Debug\net5.0\ManagementApp.BL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Women techsters\fattyass tasks\myweek11task\ManagementApp.BL\obj\Debug\net5.0\ManagementApp.BL.AssemblyInfoInputs.cache
+C:\Women techsters\fattyass tasks\myweek11task\ManagementApp.BL\obj\Debug\net5.0\ManagementApp.BL.AssemblyInfo.cs
+C:\Women techsters\fattyass tasks\myweek11task\ManagementApp.BL\obj\Debug\net5.0\ManagementApp.BL.csproj.CoreCompileInputs.cache
+C:\Women techsters\fattyass tasks\myweek11task\ManagementApp.BL\obj\Debug\net5.0\ManagementApp.BL.dll
+C:\Women techsters\fattyass tasks\myweek11task\ManagementApp.BL\obj\Debug\net5.0\ref\ManagementApp.BL.dll
+C:\Women techsters\fattyass tasks\myweek11task\ManagementApp.BL\obj\Debug\net5.0\ManagementApp.BL.pdb
