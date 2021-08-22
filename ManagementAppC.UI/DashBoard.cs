@@ -4,19 +4,33 @@ using ManagementApp.Commons;
 using ManagementApp.Models;
 using System.IO;
 using ManagementApp.DataStorage;
+using System.Threading.Tasks;
+
 
 namespace ManagementAppC.UI
 {
-    public class DashBoards
+    public class DashBoard
     {
+        private readonly ICustomerActions _customerActions;
+        private readonly IBusinessLogic cbusinessLogic;
+        public DashBoard(ICustomerActions customerActions, IBusinessLogic businessLogic)
+        {
+            _customerActions = customerActions ?? throw new ArgumentNullException(nameof(customerActions));
+            cbusinessLogic = businessLogic ?? throw new ArgumentNullException(nameof(businessLogic));
+        }
+
 
         private static string firstName;
-        private static string lastName;
-        private static string emailAddress;
-        private static string product;
-        private static string storeDetails;
 
-        public static void DisplayDashBoard(CustomerActions actions)
+        private static string lastName;
+
+        private static string emailAddress;
+
+         private static string password;
+
+
+
+        public async Task DisplayDashBoard()
         {
             bool shouldRun = true;
             while (shouldRun)
@@ -24,44 +38,42 @@ namespace ManagementAppC.UI
                 Console.ForegroundColor = ConsoleColor.DarkBlue;
                 Console.WriteLine("Welcome to my store management app.");
 
-                Console.WriteLine("Enter your login details: ");
-                Console.WriteLine("1 to Add products");
-                Console.WriteLine("2 to Save changes");
-                Console.WriteLine("3 to Remove Products");
-                Console.WriteLine("4 to get number of Products");
-                Console.WriteLine("5 to get Store details of a particular store");
-                Console.WriteLine("6 to Display Store details accordingly");
-                Console.WriteLine("7 to exit");
-                Console.WriteLine(" 0 to Logout");
+                Console.WriteLine("Enter your details:  ");
+                Console.WriteLine("1 to Register");
+                Console.WriteLine("2 to Login");
+                Console.WriteLine("0 to exit");
 
 
-                var consoleInput = Validations.IsValidInput(Console.ReadLine());
+                var consoleInput = Validations.IsvalidInput(Console.ReadLine());
                 if (consoleInput == -1)
                 {
                     Console.WriteLine("Please enter a valid input");
                     Console.Clear();
                 }
-                string username, password, username1, password1 = string.Empty;
-
                 Console.WriteLine("Enter a username:  ");
-                username = Console.ReadLine();
+                string UserId1 = Console.ReadLine();
                 Console.WriteLine("Enter a password:  ");
-                password1 = Console.ReadLine();
+                string Pass = Console.ReadLine();
+                string UserIdCorrect = "test1";
+                String PassCorrect = "password1";
+                int MaxAttempts = 6;
 
-                using (StreamReader sr = StreamReader(File.Open("../ManagementApp.DataStorage/RegisterationDetails.txt", FileMode.Open)))
+                Console.ReadKey();
+                if (UserId1 != UserIdCorrect && Pass != PassCorrect)
                 {
-                    username1 = sr.ReadLine();
-                    password1 = sr.ReadLine();
-                    sr.Close();
-                }
-                if (username == username1 && password == password1)
-                {
-                    Console.WriteLine("Login Successful");
+                    MaxAttempts++;
 
                 }
                 else
+                    break;
                 {
-                    Console.WriteLine("Login Failed");
+                    if (MaxAttempts > 6)
+                    {
+                        Console.WriteLine("Login Failed");
+
+                    }
+                    else
+                        Console.WriteLine("Login Successful");
                     Console.Read();
                 }
                 {
@@ -70,19 +82,50 @@ namespace ManagementAppC.UI
                         case 1:
                             try
                             {
+
+                               Console.WriteLine("Enter first name");
+                                firstName = Console.ReadLine();
+                                Console.WriteLine("Enter last name");
+                                lastName = Console.ReadLine();
+                                Console.WriteLine("Enter email address"); 
+                                emailAddress = Console.ReadLine();
+                                password = Console.ReadLine();
+                                Console.WriteLine("Enter your password");
+                                var customer = await _customerActions.AddCustomer(firstName, lastName, emailAddress, password);
+                                Console.WriteLine($"Customer {customer.FullName} added successfully");
+                                Console.ForegroundColor = ConsoleColor.DarkBlue;
+                                Console.WriteLine();
+                                Console.ReadKey();
+                                Console.Clear();
+                            }
+                            catch (FormatException ex) //Catches all errors relating to argument formats operations
+                            {
+
+                                Console.WriteLine(ex.Message);
+                                Console.ReadKey();
+                                Console.Clear();
+                            }
+                            catch (Exception ex)  //Catches all unforseen errors
+                            {
+                                Console.WriteLine(ex.Message);
+                                Console.ReadKey();
+                                Console.Clear();
+                            }
+                            break;
+                        case 2:
+                            try
+                            {
                                 Console.WriteLine("Enter first name");
                                 firstName = Console.ReadLine();
                                 Console.WriteLine("Enter last name");
                                 lastName = Console.ReadLine();
-                                Console.WriteLine("Enter email address");
+                                Console.WriteLine("Enter email address"); 
                                 emailAddress = Console.ReadLine();
-                                Console.WriteLine("Enter the  products");
-                                 Product = Console.ReadLine();
-                                Console.WriteLine("Enter store details");
-                                storeDetails = Console.ReadLine();
-                                Customer customer = actions.AddCustomer(firstName, lastName, emailAddress, NumOfProducts,storeDetails);
+                                password = Console.ReadLine();
+                                Console.WriteLine("Enter your password");
+                                var customer = await _customerActions.AddCustomer(firstName, lastName, emailAddress, password);
                                 Console.WriteLine($"Customer {customer.FullName} added successfully");
-                                Console.ForegroundColor = ConsoleColor.Green;
+                                Console.ForegroundColor = ConsoleColor.DarkBlue;
                                 Console.WriteLine();
                                 Console.ReadKey();
                                 Console.Clear();
@@ -101,30 +144,11 @@ namespace ManagementAppC.UI
                                 Console.Clear();
                             }
                             break;
-                        case 2:
-                            try
-                            {
-                                actions.SaveChanges();
-                                Console.WriteLine("Changes saved");
-                                Console.ForegroundColor = ConsoleColor.Green;
-                                Console.WriteLine();
-                                Console.ReadKey();
-                                Console.Clear();
-                            }
-                            catch (Exception e)  //Catches all unforseen errors
-                            {
-                                Console.WriteLine(e.Message);
-                                Console.ReadKey();
-                                Console.Clear();
-                            }
-                            break;
                         case 3:
                             try
                             {
-                                var RemoveProduct = actions.DequeueProduct();
-                                Console.WriteLine($"Product {dequeuedProduct.product} has been removed");
-                                Console.ForegroundColor = ConsoleColor.Green;
-                                Console.WriteLine("product dequeued");
+                                Console.ForegroundColor = ConsoleColor.DarkBlue;
+                                Console.WriteLine();
                                 Console.ReadKey();
                                 Console.Clear();
                             }
@@ -138,10 +162,7 @@ namespace ManagementAppC.UI
                         case 4:
                             try
                             {
-                                var product = actions.ShowProduct();
-                                Console.ForegroundColor = ConsoleColor.Green;
-                                Console.WriteLine("number of products");
-
+                                Console.ForegroundColor = ConsoleColor.DarkBlue;
                                 Console.ReadKey();
                                 Console.Clear();
                             }
@@ -155,10 +176,6 @@ namespace ManagementAppC.UI
                         case 5:
                             try
                             {
-                                actions.StoreDetails();
-                                Console.WriteLine("Details Gotten");
-                                Console.ForegroundColor = ConsoleColor.Green;
-                                Console.WriteLine();
                                 Console.ReadKey();
                                 Console.Clear();
                             }
@@ -169,27 +186,10 @@ namespace ManagementAppC.UI
                                 Console.Clear();
                             }
                             break;
-                        case 6:
+                        case 0:
                             try
                             {
-                                var storedetails = actions.DisplayStoreDetails();
-                                Console.ForegroundColor = ConsoleColor.Green;
-                                Helpers.DisplayHistoryTable(storedetails);
-                                Console.ReadKey();
-                                Console.Clear();
-                            }
-                            catch (Exception e)  //Catches all unforseen errors
-                            {
-                                Console.WriteLine(e.Message);
-                                Console.ReadKey();
-                                Console.Clear();
-                            }
-                            break;
-                        case 7:
-                            try
-                            {
-                                actions.SaveChanges();
-                                Console.WriteLine("Bye.");
+                                Console.WriteLine("weldone.");
                                 shouldRun = false;
                             }
                             catch (Exception e)  //Catches all unforseen errors
@@ -205,7 +205,7 @@ namespace ManagementAppC.UI
                 }
             }
         }
-        
-        
+
+
     }
 }

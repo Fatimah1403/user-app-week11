@@ -1,8 +1,8 @@
 namespace ManagementApp.Models
 {
-    public class SuperMarket : IStore
+    public class SuperMarket 
     {
-        public string StoreName()
+        public string Name()
         {
             return "Name";
         }
@@ -17,6 +17,10 @@ namespace ManagementApp.Models
         public int ProductPrice()
         {
             return 500;
+        }
+        public string CustomerId()
+        {
+            return "Id";
         }
         
     }

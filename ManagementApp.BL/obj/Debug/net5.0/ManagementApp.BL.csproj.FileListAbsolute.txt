@@ -10,3 +10,13 @@ C:\Women techsters\fattyass tasks\myweek11task\ManagementApp.BL\obj\Debug\net5.0
 C:\Women techsters\fattyass tasks\myweek11task\ManagementApp.BL\obj\Debug\net5.0\ManagementApp.BL.dll
 C:\Women techsters\fattyass tasks\myweek11task\ManagementApp.BL\obj\Debug\net5.0\ref\ManagementApp.BL.dll
 C:\Women techsters\fattyass tasks\myweek11task\ManagementApp.BL\obj\Debug\net5.0\ManagementApp.BL.pdb
+C:\Women techsters\fattyass tasks\myweek11task\ManagementApp.BL\bin\Debug\net5.0\ManagementApp.Commons.dll
+C:\Women techsters\fattyass tasks\myweek11task\ManagementApp.BL\bin\Debug\net5.0\ManagementApp.DataStorage.dll
+C:\Women techsters\fattyass tasks\myweek11task\ManagementApp.BL\bin\Debug\net5.0\ManagementApp.Models.dll
+C:\Women techsters\fattyass tasks\myweek11task\ManagementApp.BL\bin\Debug\net5.0\ManagementApp.Commons.pdb
+C:\Women techsters\fattyass tasks\myweek11task\ManagementApp.BL\bin\Debug\net5.0\ManagementApp.DataStorage.pdb
+C:\Women techsters\fattyass tasks\myweek11task\ManagementApp.BL\bin\Debug\net5.0\ManagementApp.Models.pdb
+C:\Women techsters\fattyass tasks\myweek11task\ManagementApp.BL\obj\Debug\net5.0\ManagementApp.BL.csproj.CopyComplete
+C:\Women techsters\fattyass tasks\myweek11task\ManagementApp.BL\bin\Debug\net5.0\ManagementApp.BL.runtimeconfig.json
+C:\Women techsters\fattyass tasks\myweek11task\ManagementApp.BL\bin\Debug\net5.0\ManagementApp.BL.runtimeconfig.dev.json
+C:\Women techsters\fattyass tasks\myweek11task\ManagementApp.BL\obj\Debug\net5.0\ManagementApp.BL.genruntimeconfig.cache

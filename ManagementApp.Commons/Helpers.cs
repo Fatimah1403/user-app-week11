@@ -18,7 +18,7 @@ namespace ManagementApp.Commons
         //         DisplayTable.PrintRow(user.FullName, user.Email, user.password, user. NumOfProducts, user.storeDetails);
         //         DisplayTable.PrintLine();
         //     }
-        }
+        
         
     }
 }

@@ -1,53 +1,59 @@
 using System.Collections.Generic;
 using System;
-using ManagementApp.BL;
+using System.Text;
 using ManagementApp.DataStorage;
 using ManagementApp.Models;
 using ManagementApp.Commons;
+using System.Threading.Tasks;
 
-namespace ManagementApp.BL
+
+namespace ManagementApp.BL  
 {
-    public class CustomerActions
+    public class CustomerActions : ICustomerActions 
     {
-        private readonly DataStore store;
-        public CustomerActions()
+        private readonly ICustomerActions _customerActions;
+        public CustomerActions(ICustomerActions customerActions)
         {
-            store = new DataStore();
-            // store.ReadUsersDataFromFile();
+             _customerActions = customerActions ?? throw new ArgumentNullException(nameof(customerActions));
         }
-        public Customer AddCustomer(string lastName, string firstName, string email, string Product, string StoreDetails)
+
+        public Task<bool> Add(Customer customer)
+        {
+            throw new NotImplementedException();
+        }
+
+        public async Task<Customer>  AddCustomer(string lastName, string firstName, string email, string password)
         {
             if (!Validations.IsEmailValid(email))
-                throw new FormatException("Email is not valid");
-            Customer newUser = new Customer
-            {
-                FirstName = firstName,
-                LastName = lastName,
-                Email = email,
-                // Product = product,
-                StoreDetails = StoreDetails
+             throw new FormatException("Email is not valid");
+              Customer customer = new Customer
+              {
+                  FirstName = firstName,
+                  LastName = lastName,
+                  Email = email,
+                  Password = password
 
-            };
-            // store.customer.Enqueue(NumOfProducts);
-             return newUser;
+              };
+            
+
+             var result = await _customerActions.Add(customer);
+             if (result)
+                return customer;
+                throw new TimeoutException("unable to create a user");
+
+
         }
-        public void SaveChanges()
+
+        public async Task<Customer> Login(string email, string password)
         {
-            store.WriteCustomerDataToFile();
-        }
-
-        // public void DequeueProducts()
-        // {
-        //     return store.Product.Dequeue();
-        // }
-        // public void EnqueueProducts()
-        // {
-        //     return store.Products.Enqueue();
-        // }
-        // public void  DisplayUsers()
-        // {
-        //     return store.users;
-        // }
-
+            var result = await _customerActions.Login(email, password);
+            return result;
+        } 
     }
 }
+
+
+   
+
+
+    

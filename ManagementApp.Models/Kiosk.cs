@@ -1,24 +1,15 @@
 namespace ManagementApp.Models
 {
-    public class Kiosk : IStore
+    public class Kiosk
     {
 
-        public string StoreName()
-        {
-            return "Name";
-        }
-        public int StoreNumber()
-        {
-            return 5549;
-        }
-        public string StoreType()
-        {
-            return "kiosk";
-        }
-        public int ProductPrice()
-        {
-            return 700;
-        }
+        public string Name { get; set; }
+        public string StoreNumber { get; set; }
+        public string StoreType { get; set; }
+        public string Products { get; set; }
+        public string CustomerId { get; set; }
+
+
 
 
     }

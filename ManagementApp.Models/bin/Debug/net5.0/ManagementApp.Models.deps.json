@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v5.0": {
       "ManagementApp.Models/1.0.0": {
+        "dependencies": {
+          "ManagementApp.Commons": "1.0.0"
+        },
         "runtime": {
           "ManagementApp.Models.dll": {}
+        }
+      },
+      "ManagementApp.Commons/1.0.0": {
+        "runtime": {
+          "ManagementApp.Commons.dll": {}
         }
       }
     }
   },
   "libraries": {
     "ManagementApp.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ManagementApp.Commons/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
